@@ -1,0 +1,24 @@
+{
+	"scripts": {
+		"clean": "rimraf -f build .cache",
+		"build": "babel src -d build --copy-files",
+		"browser": "browser-refresh ./build/server.js",
+		"dev": "pnpm run clean && pnpm run build && pnpm run browser"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.12.10",
+		"@babel/core": "^7.12.10",
+		"@babel/preset-env": "^7.12.11",
+		"browser-refresh": "^1.7.3",
+		"browser-refresh-taglib": "^1.1.0",
+		"rimraf": "^3.0.2"
+	},
+	"dependencies": {
+		"@lasso/marko-taglib": "^1.0.15",
+		"@marko/express": "^1.0.0",
+		"express": "^4.17.1",
+		"lasso": "^3.4.0",
+		"lasso-marko": "^2.5.0",
+		"marko": "^4.23.10"
+	}
+}
